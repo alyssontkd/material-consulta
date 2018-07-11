@@ -1,6 +1,12 @@
+# Comandos do VIM
+
 ### Vai para uma posição especifica dentro do arquivoi no VIM
 ```
 :goto NUMERO
+
+ou
+
+:NUMERO
 ```
 
 ### Habilitar o uso do Mouise no VIM
@@ -21,4 +27,9 @@
 ### Para desativar o realce temporariamente, digite (este é um comando, e não uma opção):
 ```
 :set nohlsearch
+```
+
+### Exibir o número da linha no editor
+```
+:set nu
 ```
