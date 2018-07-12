@@ -134,7 +134,7 @@ Ex: git remote set-url origin https://github.com/alyssontkd/vendor_zf2.git
 Ex: git remote set-url ssh_origin git@github.com:alyssontkd/vendor_zf2.git
 ```
 
-###  Forlar o PULL a sobrescrever os arquivos locais com as alterações da branch remota.
+###  Forçar o PULL a sobrescrever os arquivos locais com as alterações da branch remota.
 ```
 git fetch --all
 git reset --hard origin/<BRANCH-NAME>
@@ -146,6 +146,32 @@ git reset --hard origin/master
 git pull origin master
 ```
 
+## Criando TAGs no GIT
+### Para criar uma TAG chamada v1.3 no commit atual execute:
+```
+git tag v1.3
+```
+
+### Para criar uma TAG chamada v1.4 no commit 4b8ef995de6d77 execute:
+```
+git tag v1.4 4b8ef995de6d77
+```
+
+### Para submete-la para o servidor execute:
+```
+git push --tags origin master
+```
+
+### Para deletar uma TAG execute:
+```
+git tag -d v1.2.3
+git push origin :refs/tags/v1.2.3
+```
+
+### Para voce mover para o commit da TAG execute:
+```
+git checkout v1.5.6
+```
 
 <!-- 
 ###  Criar Tags no Código para disponibilizar para Homologação e Produção
