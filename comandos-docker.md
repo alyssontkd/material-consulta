@@ -1,3 +1,17 @@
+### Erro do Docker quando o encaminhamento IPv4 está desativado (CentOs 7)
+Quando o daemon do docker não pode se conectar ao mundo externo para baixar qualquer coisa durante o tempo de compilação um erro é gerado. Normalmente este erro é encontrado quando você está tentando criar uma imagem docker: **"[Warning] IPv4 forwarding is disabled. Networking will not work."**. Esta mensagem está nos informando será necessário habilitar o encaminhamento IPV4.
+
+Para resolver acesso o arquivo `/usr/lib/sysctl.d/99-docker.conf` com seu editor favorito a adicione, edite ou crie as seguiintes entradas para o arquivo para que o docker possa acessar o mundo externo a sua infraestrutura:
+```
+fs.may_detach_mounts=1
+net.ipv4.ip_forward=1
+```
+Feito isso basta reiniciar o serviço docker da sua máquina e prosseguir com suas atividades.
+```
+[mbacchi@centos7 ~]$ sudo systemctl restart docker
+[mbacchi@centos7 ~]$
+```
+
 ###  Verify which cgroup driver dockerd is using
 ```
 docker info | grep -i cgroup
