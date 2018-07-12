@@ -1,3 +1,17 @@
+### Criando o diretório 'planilhas' já criando todos os diretórios precedentes automaticamente
+Observ.: Só existe até o diretório /home/alysson e desejo criar uma pasta, onde não existe suas pastas precedentes.
+```
+mkdir -p /home/alysson/sistemas/sisa/planilhas
+```
+### Para criar várias pastas dentro de um diretório local
+```
+mkdir sistema banco documentos testes scripts
+```
+### Para criar várias subpastas dentro de um diretório 
+Criando vários diretórios dentro do diretório `sistemas`
+```
+mkdir -p sistemas/{banco,documentos,testes,scripts,requisitos}
+```
 ### Listar todos os usuarios cadastrados no meu linux
 ```
 getent passwd | cut -d \: -f1
