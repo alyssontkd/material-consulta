@@ -147,6 +147,11 @@ git pull origin master
 ```
 
 ## Criando TAGs no GIT
+### Criar uma TAG anotada. 
+```
+git tag -a v2.1.0 -m "xyz feature is released in this tag."
+```
+
 ### Para criar uma TAG chamada v1.3 no commit atual execute:
 ```
 git tag v1.3
@@ -172,6 +177,7 @@ git push origin :refs/tags/v1.2.3
 ```
 git checkout v1.5.6
 ```
+
 
 <!-- 
 ###  Criar Tags no Código para disponibilizar para Homologação e Produção
