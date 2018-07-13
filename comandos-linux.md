@@ -1,3 +1,12 @@
+### Listando todos os pacotes instalados no CentOs (YUM)
+```
+yum list installed
+```
+### Exportando a lista de todos os pacotes instalados no CentOs (YUM) para um arquivo
+```
+yum list installed > <caminho_arquivo>
+Ex: yum list installed > /tmp/yum-list.txt
+```
 ### Criando o diretório 'planilhas' já criando todos os diretórios precedentes automaticamente
 Observ.: Só existe até o diretório /home/alysson e desejo criar uma pasta, onde não existe suas pastas precedentes.
 ```
