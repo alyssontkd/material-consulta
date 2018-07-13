@@ -1,7 +1,17 @@
+### Para descompactar arquivos no formato ZIP
+```
+unzip arquivo.zip
+```
+### Visualizar o conteúdo de um arquivo ZIP sem descompactar 
+```
+unzip -l meuarquivo.zip
+```
+
 ### Listando todos os pacotes instalados no CentOs (YUM)
 ```
 yum list installed
 ```
+
 ### Exportando a lista de todos os pacotes instalados no CentOs (YUM) para um arquivo
 ```
 yum list installed > <caminho_arquivo>
