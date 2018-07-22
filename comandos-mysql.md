@@ -1,3 +1,7 @@
+### Caso o erro `ERROR 2006 (HY000) at line xxxx: MySQL server has gone away` seja apresentado, vá no arquivo `my.ini` e altere o parametro `max_allowed_packet` que fica na seção `[mysqld]` e reinicie o serviço do mysql.
+```
+max_allowed_packet=500M
+```
 ###  Entrar automaticamente no mysql via linha de comando já informando a senha como parametro de conexao.
 ```
 mysql -u <nome_usuario> -pmypassword -h <IP_HOST> -P 3306
