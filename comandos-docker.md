@@ -1,7 +1,7 @@
 ## Erro do Docker quando o encaminhamento IPv4 está desativado (CentOs 7)
 Quando o daemon do docker não pode se conectar ao mundo externo para baixar qualquer coisa durante o tempo de compilação um erro é gerado. Normalmente este erro é encontrado quando você está tentando criar uma imagem docker: **"[Warning] IPv4 forwarding is disabled. Networking will not work."**. Esta mensagem está nos informando será necessário habilitar o encaminhamento IPV4.
 
-Para resolver acesso o arquivo `/usr/lib/sysctl.d/99-docker.conf` com seu editor favorito a adicione, edite ou crie as seguiintes entradas para o arquivo para que o docker possa acessar o mundo externo a sua infraestrutura:
+Para resolver acesse o arquivo `/usr/lib/sysctl.d/99-docker.conf` com seu editor favorito e adicione, edite ou crie as seguintes entradas para o arquivo para que o docker possa acessar o mundo externo a sua infraestrutura:
 ```
 fs.may_detach_mounts=1
 net.ipv4.ip_forward=1
@@ -11,8 +11,29 @@ Feito isso basta reiniciar o serviço docker da sua máquina e prosseguir com su
 [mbacchi@centos7 ~]$ sudo systemctl restart docker
 [mbacchi@centos7 ~]$
 ```
+## Para apagar tudo que o docker consumiu e que não está sendo mais utilizado por ele no seu servidor.
+```
+#### espaço em disco antes da liberação ####
+root@meuservidor:~# df -h /
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      7.7G  6.9G  880M  89% /
 
-##  Verify which cgroup driver dockerd is using
+#### comando para executar a liberação do espaço ####
+root@meuservidor:~# docker system prune -a
+WARNING! This will remove:
+        - all stopped containers
+        - all volumes not used by at least one container
+        - all networks not used by at least one container
+        - all images without at least one container associated to them
+Are you sure you want to continue? [y/N] y
+
+#### espaço em disco depois da liberação ####
+root@meuservidor:~# df -h /
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda1      7.7G  5.0G  2.8G  64% /
+```
+
+##  Verificando qual driver cgroup está sendo utilizado pelo dockerd 
 ```
 docker info | grep -i cgroup
 ```
