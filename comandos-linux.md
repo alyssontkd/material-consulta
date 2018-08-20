@@ -1,3 +1,11 @@
+### Para substituir ums scring por outra sem entrar no arquivo
+```
+sed -i 's,TEXTO_ORIGINAL,novo_texto,g' nome_arquivo
+
+Ex:
+sed -i 's,GLPI,glpi,g' glpi_app1.sql
+```
+
 ### Para descompactar arquivos no formato ZIP
 ```
 unzip arquivo.zip
