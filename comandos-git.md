@@ -51,6 +51,21 @@ Os nomes de arquivos/diretórios ou extensões de arquivos listados no arquivo *
 
 * Por repositório: Deve ser armazenado no diretório do repositório e deve conter a lista dos arquivos/diretórios que devem ser ignorados apenas para o repositório específico.
 
+# Removendo uma tag
+## Localmente
+Bem, porém, por N motivos você pode querer apagar esse tag, e para fazer isso localmente o comando é bem intuitivo:
+
+```
+git tag -d 1.0.9
+```
+
+## No repositório remoto
+Mas para apagar a tag que está no servidor remoto é um pouco diferente:
+
+```
+git push origin :refs/tags/1.0.9
+```
+
 ## Repositório Local
 
 ### Criar novo repositório
