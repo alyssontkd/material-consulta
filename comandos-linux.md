@@ -1,4 +1,4 @@
-### Para substituir ums scring por outra sem entrar no arquivo
+### Para substituir uma string por outra sem entrar no arquivo
 ```
 sed -i 's,TEXTO_ORIGINAL,novo_texto,g' nome_arquivo
 
