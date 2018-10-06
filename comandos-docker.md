@@ -1,3 +1,8 @@
+## Reiniciar o Apache dentro de um Conteiner
+```
+# docker exec -it <CONTEINER_ID> /bin/bash
+# /etc/init.d/apache2 reload
+```
 ## Erro do Docker quando o encaminhamento IPv4 está desativado (CentOs 7)
 Quando o daemon do docker não pode se conectar ao mundo externo para baixar qualquer coisa durante o tempo de compilação um erro é gerado. Normalmente este erro é encontrado quando você está tentando criar uma imagem docker: **"[Warning] IPv4 forwarding is disabled. Networking will not work."**. Esta mensagem está nos informando será necessário habilitar o encaminhamento IPV4.
 
