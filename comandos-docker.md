@@ -102,3 +102,58 @@ sudo docker push alyssontkd/ambiente-desenvolvimento
 sudo docker inspect <name_container> | grep IPAddress
 Ex.: sudo docker inspect database-mysql | grep IPAddress
 ```
+
+# Limitando a memória ram dos containers
+
+## Configurando a memória para um container
+
+*Comando*
+```console
+docker run -it --memory 512m debian
+```
+
+Para visualizar a memória configurada para o container, utilize o seguinte comando:
+
+*Comando*
+```console
+docker inspect <id_container> | grep -i mem
+```
+
+*Saída*
+```console
+"Memory": 536870912,
+"CpusetMems": "",
+"KernelMemory": 0,
+"MemoryReservation": 0,
+"MemorySwap": 1073741824,
+"MemorySwappiness": -1,
+```
+
+> Observe que na primeira linha temos a quantidade de memória que configuramos para o container.
+
+## Alterando a memória do container
+
+Após o container ter sido criado, caso você precise alterar o limite de memória utilizada por ele, utilize o seguinte comando:
+
+*Comando*
+```console
+docker update --memory 256m <id_container|nome_container>
+```
+
+> Você pode substituir o parâmetro ``--memory`` por ``-m`` se preferir.
+
+# Limitando a CPU dos containers
+
+## Configurando o limite de uso de cpu do container
+
+*Comando*
+```console
+docker run -it --cpu-shares 1024 debian
+```
+
+## Alterando o limite de uso de cpu do container
+
+*Comando*
+```console
+docker update --cpu-shares 512 <id_container|nome_container>
+```
