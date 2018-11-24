@@ -1,4 +1,4 @@
-#GIT
+# GIT
 
 ## Estados
 
@@ -428,6 +428,16 @@ Seguir os mesmos passos acima, porém marcar os commtis que devem ser juntados c
 ###  Atualizar a referencia do repositório local ao repositório remoto quando se renomeia o repositório Remoto
 ```
 git remote set-url <nome_referencia> <novo_nome_remoto> <antigo_nome_remoto>
+
+git remote -v
+# Visualizar as referencias ao repositorio remoto
+
+git remote set-url origin https://github.com/user/repo2.git
+# Alterar o 'origin' remote's URL
+
+git remote -v
+# Verifique a nova remote URL
+
 
 Ex: git remote set-url origin https://github.com/alyssontkd/proxy-reverso-docker.git https://github.com/alyssontkd/proxy-reverso.git
 
