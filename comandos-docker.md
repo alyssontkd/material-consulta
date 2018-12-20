@@ -157,3 +157,29 @@ docker run -it --cpu-shares 1024 debian
 ```console
 docker update --cpu-shares 512 <id_container|nome_container>
 ```
+
+## Adicionando uma Chave SSH dentro de uma imagem docker para clone automático (sem solicitar login e senha)
+```
+FROM ubuntu
+
+MAINTAINER Luke Crooks "luke@pumalo.org"
+
+# Update aptitude with new repo
+RUN apt-get update
+
+# Install software 
+RUN apt-get install -y git
+# Make ssh dir
+RUN mkdir /root/.ssh/
+
+# Copy over private key, and set permissions
+ADD id_rsa /root/.ssh/id_rsa
+
+# Create known_hosts
+RUN touch /root/.ssh/known_hosts
+# Add bitbuckets key
+RUN ssh-keyscan bitbucket.org >> /root/.ssh/known_hosts
+
+# Clone the conf files into the docker container
+RUN git clone git@bitbucket.org:User/repo.git
+```
