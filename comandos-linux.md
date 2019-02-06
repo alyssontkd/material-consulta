@@ -6,6 +6,18 @@ Ex:
 sed -i 's,GLPI,glpi,g' glpi_app1.sql
 ```
 
+### Compactar um diretório com o comando TAR 
+```
+tar -zcf nome_arq.tar nome_dir_ou_arq_a_ser_compactado
+Ex: tar -zcf banco_projeto.tar /tmp/banco (diretório)
+Ex: tar -zcf pacote.tar arquivo1.gif memorando.htm carta.doc (arquivos individuais)
+```
+
+### Para descompactar arquivos no formato TAR
+```
+tar -zxvf nomedoarq.tar
+```
+
 ### Para descompactar arquivos no formato ZIP
 ```
 unzip arquivo.zip
