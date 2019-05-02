@@ -344,6 +344,13 @@ A mensagem indicando um *merge* manual será:
 
 	git push origin:bug-123
 
+##### Renomear branch localmente
+
+	git branch -m <nome antigo> <nome novo>
+	Ex.
+	git branch -m feature-2 versao2.0
+
+
 ### Rebasing
 
 Fazendo o **rebase** entre um o branch bug-123 e o master.
