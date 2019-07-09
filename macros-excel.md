@@ -1,4 +1,4 @@
-Abra o Excel e pressiona `Alt + F11` para abrir o Visual Basic, cole o código abaixo e pressione o RUN.
+### Para quebrar uma planilha gigante em várias abas do Excel
 
 ```
 Sub prcTrannsferir()
