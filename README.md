@@ -4,6 +4,11 @@ Este é apenas um repositório de comandos que utilizo constantemente e que volt
 
 Aqui voce encontrará comandos utilizados em:
 
+# Excel
+
+[**Macros**](macros-excel.md)
+
+
 # Automação de Testes
 
 [**Cucumber**](comandos-cucumber.md)
