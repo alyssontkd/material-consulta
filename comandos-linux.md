@@ -6,6 +6,17 @@ Ex:
 sed -i 's,GLPI,glpi,g' glpi_app1.sql
 ```
 
+### Limpando o diretório /boot no CentOS e Família RedHat
+```
+yum install yum-utils -y
+package-cleanup --oldkernels --count=1
+grub2-mkconfig -o /boot/grub2/grub.cfg ( atualizar a tela inicial do grub2: /boot/grub2/grub.cfg)
+
+Caso você queira evitar este problema futuramente, edite o arquivo /etc/yum.conf e altere o parametro abaixo:
+installonly_limit=2 ou installonly_limit=1
+
+```
+
 ### Instalando o HTOP no CentOS e Família RedHat
 ```
 cd /tmp
