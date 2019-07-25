@@ -6,6 +6,14 @@ Ex:
 sed -i 's,GLPI,glpi,g' glpi_app1.sql
 ```
 
+### Instalando o HTOP no CentOS e Família RedHat
+```
+cd /tmp
+wget dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+rpm -ihv epel-release-7-11.noarch.rpm
+yum install htop -y
+```
+
 ### Compactar um diretório com o comando TAR 
 ```
 tar -zcf nome_arq.tar nome_dir_ou_arq_a_ser_compactado
