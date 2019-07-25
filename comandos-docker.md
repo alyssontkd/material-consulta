@@ -183,3 +183,45 @@ RUN ssh-keyscan bitbucket.org >> /root/.ssh/known_hosts
 # Clone the conf files into the docker container
 RUN git clone git@bitbucket.org:User/repo.git
 ```
+
+## Instalção do DOCKER no Debian e RedHat
+**Instalando o docker via repositório do Ubuntu, Deepin e família Debian**
+```
+$ sudo apt update
+$ sudo apt install docker.io
+$ sudo systemctl start docker
+$ sudo systemctl enable docker
+$ docker --version
+Docker version 18.03.1-ce, build 9ee9f40
+```
+**Instalando no CentOS, Mint e família RedHat**
+```
+$ sudo yum update
+$ sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+$ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+$ sudo yum install docker-ce
+$ sudo usermod -aG docker $(whoami)
+$ sudo systemctl enable docker.service
+$ docker --version
+Docker version 18.03.1-ce, build 9ee9f40
+```
+
+## Instalar DOCKER-COMPOSE no Debian e RedHat
+**Instalando no CentOS, Mint e família RedHat**
+```
+$ sudo yum install epel-release
+$ sudo yum install -y python-pip
+$ sudo pip install docker-compose
+$ sudo yum upgrade python*
+$ pip install --upgrade pip
+```
+## No Ubuntu, Deepin e família Debian
+```
+$ sudo curl -L https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+```
+
+**Pronto! Seu docker-compose já deve estar instalado. Valide a instalação com o comando abaixo:**
+```
+$ docker-compose --version
+```
