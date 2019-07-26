@@ -25,6 +25,22 @@ rpm -ihv epel-release-7-11.noarch.rpm
 yum install htop -y
 ```
 
+### Liberando porta 80 - http no firewall do linux da família RedHad (Mint e CentOS):
+```
+$ sudo firewall-cmd --list-all                           (Lista os serviços liberados)
+$ sudo firewall-cmd --add-service=http --permanent       (Adiciona a porta 80 como autorizada a receber conexão)
+$ sudo firewall-cmd --reload                             (Recarregue as configurações do Browser)
+$ sudo firewall-cmd --list-all                           (Lista os serviços liberados)
+```
+
+### Removendo porta 22 - SSH no firewall do linux da família RedHad (Mint e CentOS):
+```
+$ sudo firewall-cmd --list-all                           (Lista os serviços liberados)
+$ sudo firewall-cmd --remove-service=ssh --permanent    (Só execute caso deseja remover a liberação do SSH)
+$ sudo firewall-cmd --reload                             (Recarregue as configurações do Browser)
+$ sudo firewall-cmd --list-all                           (Lista os serviços liberados)
+```
+
 ### Compactar um diretório com o comando TAR 
 ```
 tar -zcf nome_arq.tar nome_dir_ou_arq_a_ser_compactado
