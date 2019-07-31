@@ -8,6 +8,13 @@ $ gem install ruby-mysql
 $ gem install ruby-oci8
 $ gem install pg
 ```
+Removendo uma Gema do cucumber
+```
+$ gem uninstall <nome da gem>
+
+Ex:
+$ gem uninstall cucumber_spinner
+```
 
 Atualizando as gemas do Seu Sistema Operacional
 ```
