@@ -1,3 +1,19 @@
+# Ruby
+Instalando uma nova Gema para utilização do cucumber
+```
+$ gem install <nome da gem>
+
+Ex:
+$ gem install ruby-mysql
+$ gem install ruby-oci8
+```
+
+Atualizando as gemas do Seu Sistema Operacional
+```
+$ bundle update
+$ gem update
+```
+
 # Cucumber
 
 Na especificação do Cucumber as funcionalidades são escritas utilizando a linguagem chamada Gherkin (próxima linguagem natural) e contém algumas palavras-chave.
