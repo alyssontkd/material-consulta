@@ -6,6 +6,7 @@ $ gem install <nome da gem>
 Ex:
 $ gem install ruby-mysql
 $ gem install ruby-oci8
+$ gem install pg
 ```
 
 Atualizando as gemas do Seu Sistema Operacional
