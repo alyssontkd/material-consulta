@@ -17,12 +17,20 @@ installonly_limit=2 ou installonly_limit=1
 
 ```
 
+### Desabilitando um repositório de pacotes no linux da família RedHad (Mint e CentOS):
+```
+$ yum-config-manager --disable <nome-repositorio>
+
+Ex: 
+$ yum-config-manager --disable gitlab_gitlab-ee-source
+```
+
 ### Instalando o HTOP no CentOS e Família RedHat
 ```
-cd /tmp
-wget dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
-rpm -ihv epel-release-7-11.noarch.rpm
-yum install htop -y
+$ cd /tmp
+$ wget dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+$ rpm -ihv epel-release-7-11.noarch.rpm
+$ yum install htop -y
 ```
 
 ### Liberando porta 80 - http no firewall do linux da família RedHad (Mint e CentOS):
