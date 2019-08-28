@@ -16,12 +16,13 @@ $ npm install -g expo-cli
 ```
 
 ### Atualizando a versão do SDK do EXPO
+```
 {
   "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
   "expo": "^34.0.1", <- Atualize o numero da versao aqui
   "react": "16.8.3"
 }
-
+```
 ```
 # Após altera a versão, delete o diretório `node_modules` e execute o comando `npm install` novamente
 
@@ -31,6 +32,13 @@ $ npm install
 ```
 
 ### Fazer o build para android
+
 ```
 $ expo build:android
+```
+
+### Instalando modulos de dependencia
+`Unable to resolve module `scheduler` from.....`
+```
+$ expo-cli install scheduler
 ```
