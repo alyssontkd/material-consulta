@@ -9,6 +9,7 @@ $ npm audit fix  (Corrige alguns erros automaticamente)
 
 ### Atualizando a versão do SDK do EXPO
 ```
+$ vim package.json
 {
   "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
   "expo": "^34.0.1", <- Atualize o numero da versao aqui
@@ -19,6 +20,7 @@ $ npm audit fix  (Corrige alguns erros automaticamente)
 
 $ cd <pasta-projeto>
 $ rm -rf node_modules
+$ rm -rf package-lock.json
 $ npm install
 ```
 
