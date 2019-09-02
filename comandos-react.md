@@ -39,5 +39,12 @@ $ expo-cli install scheduler
 ### Atualizando uma dependência
 `Exemplo: npm WARN deprecated joi@14.0.4: This version has been deprecated in accordance with the hapi support policy....`
 ```
-$ expo-cli install scheduler
+$ expo-cli install joi
+```
+
+## Corrigindo ERROS
+`Exemplo: npm ERR! code SELF_SIGNED_CERT_IN_CHAIN....`
+```
+$ npm set strict-ssl false
+$ npm config set strict-ssl false
 ```
