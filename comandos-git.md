@@ -43,6 +43,12 @@ As configurações realizadas através dos comandos abaixo serão incluídas no 
 ##### Listar configurações
 	git config --list
 
+##### Salvar as credenciais do GIT permanentemente
+	git config --global credential.helper cache
+
+##### Salvar as credenciais do GIT por um período
+	git config --global credential.helper 'cache --timeout=28800'
+	
 ### Ignorar Arquivos
 
 Os nomes de arquivos/diretórios ou extensões de arquivos listados no arquivo **.gitignore** não serão adicionados em um repositório. Existem dois arquivos .gitignore, são eles:
