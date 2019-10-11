@@ -1,4 +1,14 @@
 # Principais comandos utilizados com React
+
+### Atualizando para a ultima versãpo do Expo
+```
+$ npm install -g npm  (Atualiza globalmente a versão do Node.js)
+$ npm install --save react@latest (Instalar a ultima versão do react)
+$ npm install -g expo-cli (Instalar a ultima versão do Expo)
+$ npm install (Instalar a todas as dependencias do arquivo package.json)
+$ npm audit fix  (Corrige alguns erros automaticamente)
+```
+
 ### Resumo para preparar o ambiente para desenvolver em React com Expo
 ```
 $ npm install -g npm  (Atualiza globalmente a versão do Node.js)
