@@ -6,6 +6,11 @@ Ex:
 sed -i 's,GLPI,glpi,g' glpi_app1.sql
 ```
 
+### Retorna a quantidade de arquivos dentro de um diretório
+```
+$ find /var/www/html -maxdepth 1 -type d | while read -r dir; do printf "%s:\t" "$dir"; find "$dir" -type f | wc -l; done
+```
+
 ### Limpando o diretório /boot no CentOS e Família RedHat
 ```
 yum install yum-utils -y
