@@ -1,3 +1,16 @@
+
+### Apagar arquivos baseado na sua data de modificação. Serve para apagar arquivos antigos que não são mais utilizados
+```
+sudo find '[caminho]' -mtime +10 -type f -exec rm {} \; || true
+
+Ex:
+sudo find '/var/log/launcher' -mtime +10 -type f -exec rm {} \; || true
+
+OBS: -mtimen avaliará como verdadeiro se o tempo de modificação do arquivo subtraído do tempo de inicialização, dividido por 86400 (com o restante descartado) for n.
+```
+
+
+
 ### Para substituir uma string por outra sem entrar no arquivo
 ```
 sed -i 's,TEXTO_ORIGINAL,novo_texto,g' nome_arquivo
