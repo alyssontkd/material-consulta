@@ -1,6 +1,8 @@
 ## Comando úteis para as implementações
 
-
+```
+opru4opup4r4p9u44u90ru094ur90u490ru409u04uu490ut904u9u490
+```
 ##### Simulando a tecla ENTER
 ```
 find('#id_componente').native.send_keys(:enter)
