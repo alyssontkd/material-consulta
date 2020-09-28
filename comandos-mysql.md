@@ -7,6 +7,10 @@ RETURN REPLACE(SUBSTRING(SUBSTRING_INDEX(str, delim, pos),
        LENGTH(SUBSTRING_INDEX(str, delim, pos-1)) + 1),
        delim, '');
 ```
+Exemplo de Utilização
+```
+SELECT SPLIT_STRING('apple, pear, melon', ',', 1)
+```
 
 ### Erros comuns do MySQL
 > Caso o erro `ERROR 2006 (HY000) at line xxxx: MySQL server has gone away` seja apresentado, vá no arquivo `my.ini` e altere o parametro `max_allowed_packet` que fica na seção `[mysqld]` e reinicie o serviço do mysql.
