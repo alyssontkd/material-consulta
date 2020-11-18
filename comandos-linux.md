@@ -1,3 +1,14 @@
+### Enviar Email com sendEmail via Terminal do Ubuntu
+```
+;; Modo Debug
+$ sendEmail -v -v -f central.millenium@gmail.com -t alyssontkd@gmail.com -u "Test Mail" -o username="central.millenium@gmail.com" -o password="magatti1981" -s "smtp.gmail.com:587" -o message-file=TODO.md
+
+;; Modo Enviar Email com Anexo (Gmail)
+$ sendEmail -f central.millenium@gmail.com -t alyssontkd@gmail.com -u "[Anexo] Backup do servidor da FINANCEIRO" -m "Backup do servidor FINANCEIRO" -a TODO.md -s smtp.gmail.com:587 -xu central.millenium@gmail.com -xp magatti1981 -o tls=yes
+
+;; Modo Enviar Email com Anexo (Outro Serviço de Email)
+$ sendEmail -f asstjinforma@vertenti.com.br -t alyssontkd@gmail.com -u "[Anexo] Teste de envio de email" -m "Backup do servidor ASSTJ" -a TODO.md -s smtp.hostinger.com.br:587 -xu asstjinforma@vertenti.com.br -xp 	 -o tls=yes
+```
 
 ### Apagar arquivos baseado na sua data de modificação. Serve para apagar arquivos antigos que não são mais utilizados
 ```
