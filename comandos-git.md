@@ -44,7 +44,8 @@ As configurações realizadas através dos comandos abaixo serão incluídas no 
 	git config --list
 
 ##### Salvar as credenciais do GIT permanentemente
-	git config --global credential.helper cache
+	git config --global credential.helper store
+	git pull ori
 
 ##### Salvar as credenciais do GIT por um período
 	git config --global credential.helper 'cache --timeout=28800'
