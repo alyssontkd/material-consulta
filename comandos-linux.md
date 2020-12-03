@@ -20,7 +20,19 @@ sudo find '/var/log/launcher' -mtime +10 -type f -exec rm {} \; || true
 OBS: -mtimen avaliará como verdadeiro se o tempo de modificação do arquivo subtraído do tempo de inicialização, dividido por 86400 (com o restante descartado) for n.
 ```
 
+### Retorna a quantidade de processos que esta sendo executada por cada usuarioi logado no servidor
+```
+# ps -eo user=|sort|uniq -c
+```
 
+### Retorna a quantidade de processos de um serviço específico que esta sendo executada no servidor
+```
+# ps -C <nome-do-processo> | wc -l
+Ex: 
+# ps -C httpd | wc -l
+ou
+# pgrep httpd | wc -l
+```
 
 ### Para substituir uma string por outra sem entrar no arquivo
 ```
