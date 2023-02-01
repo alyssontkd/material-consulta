@@ -467,6 +467,11 @@ git diff --name-status --diff-filter=U
 git config --global http.sslVerify false
 ```
 
+###  Clonar repositorio já desabilitando a verificação SSL (Exemplo do Erro: SSL certificate problem: unable to get local issuer certificate)
+```
+git -c http.sslVerify=false clone https://gitlab.poupex.com.br/poupex/imobiliario/webs-imobiliario/fornecedores-ti-web.git
+```
+	
 ###  Comando para fazer o git ignorar mudança de permissao como alteração no arquivo.
 ```
 git config core.fileMode false
