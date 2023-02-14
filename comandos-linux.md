@@ -1,3 +1,10 @@
+### Executa um comando automaticamente a cada xx segundos
+```
+;; Executa do df-vh a cada 5 segundos
+watch -n 5 df -vh
+```
+watch -n 5 df -vh
+
 ### Apagar arquivos com mais de XX dias
 ```
 ;; mais que 360 dias
