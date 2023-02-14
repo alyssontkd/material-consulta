@@ -1,3 +1,9 @@
+### Apagar arquivos com mais de XX dias
+```
+;; mais que 360 dias
+find /usr/local/scci-fpc/.git/objects/pack ! -mtime -360 |xargs rm -rf
+```
+
 ### Enviar Email com sendEmail via Terminal do Ubuntu
 ```
 ;; Modo Debug
