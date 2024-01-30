@@ -518,6 +518,11 @@ git checkout -b <BRANCH-NAME>
 Ex: git checkout -b seguranca
 ```
 
+### Setar a Raiz Original para uma Brach criada e que teve sua raiz inicial deletada
+```
+git push --set-upstream origin master
+```
+
 ###  Forçar um "git push" para sobrescrever os arquivos remotos
 ```
 git push -f <remote> <branch>
