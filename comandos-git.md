@@ -130,7 +130,10 @@ git push origin :refs/tags/1.0.9
 ##### Exibir histórico
 	
 	git log
-	
+
+##### Exibir a quantidade de commits realizada em um determinado intervalo de data
+`git log --pretty=oneline --since="2024-05-01" --before="2024-05-31" | wc -l`
+
 ##### Exibir histórico com diff das duas últimas alterações
 
 	git log -p -2
