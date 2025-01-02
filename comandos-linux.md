@@ -5,6 +5,27 @@ watch -n 5 df -vh
 ```
 watch -n 5 df -vh
 
+### Lista todos os arquivos modificados nos ultimos 05 minutos
+```
+;; Executa do find /tmp -mmin -05 -ls a cada 2 segundos
+watch -n 2 find /tmp -mmin -05 -ls
+```
+watch -n 2 find /tmp -mmin -05 -ls
+
+### Lista todos os arquivos modificados nos ultimos 10 dias
+```
+;; Executa do find /tmp -mmin -05 -ls a cada 2 segundos
+watch -n 2 find /tmp -mtime -10 -ls
+```
+watch -n 2 find /tmp -mtime -10 -ls
+
+### Lista todos os arquivos modificados a mais 10 dias
+```
+;; Executa do find /tmp -mmin +10 -ls a cada 2 segundos
+watch -n 2 find /tmp -mtime +10 -ls
+```
+watch -n 2 find /tmp -mtime +10 -ls
+
 ### Apagar arquivos com mais de XX dias
 ```
 ;; mais que 360 dias
