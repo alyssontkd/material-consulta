@@ -15,7 +15,7 @@ pg_dump -U db_user -W -F p db_name > /path_of_the_dump/dump_file.sql
 ```
 ### Exemplo
 ```
-pg_dump -U postgres -W -F p opera360 --column-inserts > D:/tmp/opera360.sql
+$ pg_dump -U postgres -W -F p opera360 --column-inserts > D:/tmp/opera360.sql
 ```
 
 # Realizar Restore do tipo Plain a partir do Terminal
