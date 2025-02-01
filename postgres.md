@@ -2,9 +2,10 @@
 ```
 createdb -h localhost -p 5432 -U <usaerdb> <database_name>
 psql -U <usaerdb> -d  <database_name> -f /paht-file/file-name.sql
-
-Ex: createdb -h localhost -p 5432 -U postgres opera360text
-Ex: psql -U postgres -d opera360 -f D:/tmp/opera360.sql
+```
+### Exemplo
+`createdb -h localhost -p 5432 -U postgres opera360text`
+`psql -U postgres -d opera360 -f D:/tmp/opera360.sql`
 ```
 
 # Realizar Backup do tipo Plain a partir do Terminal (Com comandos INSERT)
