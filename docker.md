@@ -131,6 +131,12 @@ docker inspect <id_container> | grep -i mem
 
 > Observe que na primeira linha temos a quantidade de memória que configuramos para o container.
 
+##  Copiar arquivos pra dentro do conteiner
+> Copia o arquivo local (/tmp/opera360api-higienizado.sql) para a pasta /tmp dentro do conteiner opera360-climatica_db
+```
+sudo docker cp /tmp/opera360api-higienizado.sql opera360-climatica_db:/tmp
+```
+
 ## Alterando a memória do container
 
 Após o container ter sido criado, caso você precise alterar o limite de memória utilizada por ele, utilize o seguinte comando:
