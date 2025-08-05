@@ -312,6 +312,16 @@ A mensagem indicando um *merge* manual será:
 	CONFLICT (content): Merge conflict in meu_arquivo.txt
 	Automatic merge failed; fix conflicts and then commit the result.
 
+##### Execute o Coletor de Lixo (Garbage Collector)
+```
+sudo git gc --prune=now --aggressive
+```
+
+O que este comando faz:
+git gc: Inicia o processo do coletor de lixo.
+--prune=now: Remove todos os objetos "soltos" (não referenciados por nenhum commit) que são mais antigos que "agora". A opção padrão é manter objetos por duas semanas, mas para uma limpeza imediata, usamos now.
+--aggressive: Instrui o git gc a gastar mais tempo e esforço para encontrar a melhor forma de comprimir os objetos, resultando em um repositório menor. Este processo pode ser lento em repositórios muito grandes, mas é muito eficaz.
+
 
 ##### Apagando um branch
 
