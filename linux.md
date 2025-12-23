@@ -3,7 +3,20 @@
 ;; Executa do df-vh a cada 5 segundos
 watch -n 5 df -vh
 ```
-watch -n 5 df -vh
+
+### Para limpar a Swap no linux: 
+```
+sudo swapoff -a && sudo swapon -a
+```
+
+### Para aumentar o tamanho da Swap no Ubuntu, faça isso:
+```
+sudo swapoff -a
+sudo fallocate -l 2G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon -a
+```
 
 ### Lista todos os arquivos modificados nos ultimos 05 minutos
 ```
